@@ -45,6 +45,7 @@ group :test do
 	gem "shoulda-matchers"
 	gem 'nyan-cat-formatter'
 	gem 'simplecov', :require => false
+  gem 'coveralls', require: false
 	gem 'capybara'
 	gem 'database_cleaner'
 	gem 'spring-commands-rspec'
