@@ -18,3 +18,30 @@
 # RVM
 .ruby-version
 .ruby-gemset
+
+
+
+*.rbc
+capybara-*.html
+/log
+/tmp
+/db/*.sqlite3
+/public/system
+/coverage/
+/spec/tmp
+**.orig
+rerun.txt
+pickle-email-*.html
+config/initializers/secret_token.rb
+config/database.yml
+.idea/
+.DS_Store
+bower_components/
+.coveralls.yml
+.env
+
+
+
+## Environment normalisation:
+/.bundle
+/vendor/bundle
