@@ -1,0 +1,14 @@
+Metrics/LineLength:
+  Max: 125
+
+Style/InlineComment:
+  Enabled: true
+
+Style/MethodCalledOnDoEndBlock:
+  Enabled: true
+
+Style/StringLiterals:
+  Enabled: false
+
+Style/SymbolArray:
+  Enabled: true

@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '2.1.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
@@ -26,15 +27,47 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'foreman'
 
-# Use unicorn as the app server
-# gem 'unicorn'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+group :development, :test do
+	gem 'guard-rspec'
+end
 
-# Use debugger
-# gem 'debugger', group: [:development, :test]
 
+group :development do
+	gem 'brakeman', require: false
+end
+
+
+group :test do
+	gem "rspec-rails"
+	gem "shoulda-matchers"
+	gem 'nyan-cat-formatter'
+	gem 'simplecov', :require => false
+	gem 'capybara'
+	gem 'database_cleaner'
+	gem 'spring-commands-rspec'
+end
+
+group :development, :test, :production do
+	gem "factory_girl_rails"
+	gem 'faker'
+end
+
+
+gem 'carrierwave'
+gem 'mini_magick'
+
+gem 'devise'
+gem 'cancancan'
+gem 'rolify'
+
+
+# API
+gem 'grape'
+gem 'grape-swagger'
+gem 'grape-swagger-rails'
+gem 'grape-kaminari'
+gem 'rack-cors', :require => 'rack/cors'
+gem 'grape-entity'
