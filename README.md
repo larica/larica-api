@@ -5,11 +5,9 @@
 [![Inch-ci](http://inch-ci.org/github/larica/larica-api.png?branch=master)](https://coveralls.io/r/larica/larica-api)
 [![Code Climate](https://codeclimate.com/github/larica/larica-api/badges/gpa.svg)](https://codeclimate.com/github/larica/larica-api)
 
-=====================================
 # Larica APP
-
 Larica is a gastronomic project that aims to help people to prepare delicious dishes with what's available in the fridge.
 
-# Larica APP API
+### Larica APP API
 
-## Initial Configuration
+### Initial Configuration
