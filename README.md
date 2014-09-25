@@ -10,4 +10,4 @@ Larica is a gastronomic project that aims to help people to prepare delicious di
 
 ### Larica APP API
 
-### Initial Configuration
+
