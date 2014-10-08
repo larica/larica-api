@@ -1,10 +1,10 @@
 Fabricator(:recipe) do
-  name             "MyString"
-  preparation_time 1
-  portions         1
-  microwave        false
-  category         nil
-  user             nil
-  status           "MyString"
-  language         nil
+  name { Faker::Commerce.product_name }
+  preparation_time { Faker::Number.digit }
+  portions { Faker::Number.digit }
+  microwave { [true, false].sample }
+  status { Faker::Lorem.word }
+  category
+  user
+  language
 end
