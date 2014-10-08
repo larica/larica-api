@@ -1,3 +1,5 @@
+require 'grape-swagger'
+
 module Larica
   module V1
     class Base < Grape::API
@@ -10,7 +12,9 @@ module Larica
 
       mount Languages
 
-
+      add_swagger_documentation api_version: 'v1',
+                                hide_documentation_path: true,
+                                markdown: GrapeSwagger::Markdown::RedcarpetAdapter.new
     end
   end
 
