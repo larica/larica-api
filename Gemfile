@@ -52,8 +52,9 @@ gem 'kramdown'
 
 # API
 gem 'grape'
-gem 'grape-swagger'
-gem 'grape-swagger-rails'
+gem 'grape-swagger', '~>0.8.0'
 gem 'grape-kaminari'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'grape-entity'
+gem 'redcarpet'
+gem 'rouge'

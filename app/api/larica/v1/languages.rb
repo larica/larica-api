@@ -14,10 +14,11 @@ class Larica::V1::Languages < Grape::API
 
     desc "Return all languages", {
         notes: <<-NOTE
+        #Languages
 
-                          Example:
-                          --------
-                              http GET http://localhost:3000/v1/languages.json
+        REQUEST
+        =====================
+            http GET http://localhost:3000/v1/languages.json
 
         NOTE
     }

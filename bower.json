@@ -1,0 +1,13 @@
+{
+  "name": "larica-api",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+      "swagger-ui": "git://github.com/wordnik/swagger-ui"
+  }
+}
