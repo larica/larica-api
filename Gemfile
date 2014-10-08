@@ -54,6 +54,8 @@ gem 'cancancan'
 gem 'rolify'
 gem 'kramdown'
 
+gem 'rails_12factor', group: :production
+
 # API
 gem 'grape'
 gem 'grape-swagger', '~>0.8.0'
