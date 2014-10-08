@@ -12,6 +12,10 @@ module LaricaApi
     config.paths.add File.join('app', 'api'), glob: File.join('**', '*.rb')
     config.autoload_paths += Dir[Rails.root.join('app', 'api', '*')]
 
+    config.assets.paths << Rails.root.join('vendor', 'assets', 'components', 'swagger-ui','dist','images')
+
+    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
+
     config.generators do |g|
       g.stylesheets false
       g.javascripts false
