@@ -9,6 +9,9 @@ Bundler.require(*Rails.groups)
 module LaricaApi
   class Application < Rails::Application
 
+    config.paths.add File.join('app', 'api'), glob: File.join('**', '*.rb')
+    config.autoload_paths += Dir[Rails.root.join('app', 'api', '*')]
+
     config.generators do |g|
       g.stylesheets false
       g.javascripts false
@@ -19,7 +22,7 @@ module LaricaApi
         :routing_specs => false,
         :controller_specs => true,
         :request_specs => true
-      g.fixture_replacement :factory_girl, :dir => "spec/factories"
+      g.fixture_replacement :fabrication
     end
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
