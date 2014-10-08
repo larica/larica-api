@@ -1,0 +1,5 @@
+GrapeSwaggerRails.options.url      = '/swagger_doc'
+GrapeSwaggerRails.options.api_key_name = 'token'
+GrapeSwaggerRails.options.api_key_type = 'query'
+GrapeSwaggerRails.options.app_name = 'Larica API'
+GrapeSwaggerRails.options.app_url  = 'http://localhost:3000'

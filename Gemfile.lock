@@ -298,6 +298,7 @@ DEPENDENCIES
   grape-swagger
   grape-swagger-rails
   guard-rspec
+  kramdown
   mini_magick
   nyan-cat-formatter
   pg
