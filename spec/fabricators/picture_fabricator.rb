@@ -1,5 +1,5 @@
 Fabricator(:picture) do
-  file   "MyString"
-  status "MyString"
-  recipe nil
+  file { Faker::Avatar.image }
+  status { Faker::Lorem.word }
+  recipe
 end

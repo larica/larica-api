@@ -1,5 +1,5 @@
 Fabricator(:ingredient) do
-  name     "MyString"
-  metrics  "MyString"
-  language nil
+  name { Faker::Commerce.product_name }
+  metrics { "#{Faker::Number.digit} Faker::Lorem.word" }
+  language
 end
