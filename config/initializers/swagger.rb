@@ -11,4 +11,3 @@ GrapeSwaggerRails.options.app_url  = base_url
 GrapeSwaggerRails.options.api_key_name = 'token'
 GrapeSwaggerRails.options.api_key_type = 'query'
 GrapeSwaggerRails.options.app_name = 'Larica API'
-
