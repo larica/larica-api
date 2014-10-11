@@ -59,6 +59,7 @@ gem 'rails_12factor', group: :production
 # API
 gem 'grape'
 gem 'grape-swagger', '~>0.8.0'
+gem 'grape-swagger-rails', git: 'https://github.com/pragmaticivan/grape-swagger-rails.git'
 gem 'grape-kaminari'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'grape-entity'
