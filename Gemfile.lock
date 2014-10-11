@@ -144,6 +144,9 @@ GEM
     haml (4.0.5)
       tilt
     hashie (3.3.1)
+    hashie_rails (0.0.1)
+      hashie (>= 3.0)
+      rails (~> 4.0)
     highline (1.6.21)
     hike (1.2.3)
     hitimes (1.2.2)
@@ -326,6 +329,7 @@ DEPENDENCIES
   grape-swagger (~> 0.8.0)
   grape-swagger-rails!
   guard-rspec
+  hashie_rails
   kramdown
   mini_magick
   nyan-cat-formatter
