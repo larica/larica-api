@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'swagger' => 'doc#index'
+  mount GrapeSwaggerRails::Engine => '/swagger'
   root 'home#index'
   mount API => '/'
 end
