@@ -10,7 +10,7 @@ module Larica
         # authenticate!
       end
 
-      mount Languages
+      mount Categories
 
       add_swagger_documentation api_version: 'v1',
                                 hide_documentation_path: true,
