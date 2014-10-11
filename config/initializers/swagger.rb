@@ -1,6 +1,5 @@
 GrapeSwaggerRails.options.url      = '/v1/swagger_doc'
 
-
 if Rails.env.production?
   base_url = 'http://larica-api.herokuapp.com'
 else
