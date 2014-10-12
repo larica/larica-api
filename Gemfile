@@ -45,7 +45,7 @@ gem 'coffee-rails', '~> 4.0.0'
 
 gem 'spring',        group: :development
 gem 'foreman'
-
+gem 'rubocop', require: false
 gem 'carrierwave'
 gem 'mini_magick'
 
