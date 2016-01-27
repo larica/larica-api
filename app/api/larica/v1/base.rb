@@ -11,10 +11,7 @@ module Larica
       end
 
       mount Categories
-
-      add_swagger_documentation api_version: 'v1',
-                                hide_documentation_path: true,
-                                markdown: GrapeSwagger::Markdown::RedcarpetAdapter.new
+      
     end
   end
 
