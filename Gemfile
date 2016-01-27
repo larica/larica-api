@@ -52,6 +52,12 @@ gem 'cancancan'
 gem 'rolify'
 gem 'kramdown'
 
+# Background Jobs
+gem 'sidekiq'
+gem 'sidekiq-failures'
+gem 'sinatra', require: false
+gem 'whenever', require: false
+
 gem 'rails_12factor', group: :production
 
 # API

@@ -1,0 +1,64 @@
+proxy:
+  image: jwilder/nginx-proxy:latest
+  ports:
+    - "80:80"
+  volumes:
+    - "/var/run/docker.sock:/tmp/docker.sock"
+db:
+  image: postgres
+  volumes:
+    - ./db/dumps:/app-db-dumps # We're mounting this folder so we can backup/restore database dumps from our app folder.
+    - ./db/postgres-setup.sql/docker-entrypoint-initdb.d/setup.sql
+  ports:
+    - "5432:5432"
+redis:
+  image: redis
+  ports:
+    - "6379"
+box:
+  image: busybox
+  volumes:
+    - /box
+web:
+  build: .
+  command: passenger start --port 80
+  environment:
+    - DB_USERNAME=postgres
+    - DB_PASSWORD=postgres
+    - PASSENGER_APP_ENV=development
+    - RAILS_ENV=development
+    - REDIS_HOST=docker
+    - VIRTUAL_HOST=larica.docker.dev
+  volumes_from:
+    - box
+  links:
+    - db
+    - redis
+cron:
+  build: .
+  command: whenever
+  environment:
+    - DB_USERNAME=postgres
+    - DB_PASSWORD=postgres
+    - PASSENGER_APP_ENV=development
+    - RAILS_ENV=development
+    - REDIS_HOST=docker
+  volumes_from:
+    - box
+  links:
+    - db
+    - redis
+worker:
+  build: .
+  command: bundle exec sidekiq -e development -c 25
+  environment:
+    - DB_USERNAME=postgres
+    - DB_PASSWORD=postgres
+    - PASSENGER_APP_ENV=development
+    - RAILS_ENV=development
+    - REDIS_HOST=docker
+  volumes_from:
+    - box
+  links:
+    - db
+    - redis
